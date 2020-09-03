@@ -1,3 +1,7 @@
+## 0.3.1
+
+- Downgraded meta package version to 1.1.8
+
 ## 0.3.0
 
 - Updated package dependencies (@lohanidamodar)
