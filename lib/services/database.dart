@@ -17,17 +17,19 @@ class Database extends Service {
      /// of the project documents. [Learn more about different API
      /// modes](/docs/admin).
      ///
-    Future<Response> listDocuments({@required String collectionId, List filters = const [], int limit = 25, int offset = 0, String orderField = '\$id', OrderType orderType = OrderType.asc, String orderCast = 'string', String search = ''}) {
+    Future<Response> listDocuments({@required String collectionId, List filters = const [], int offset = 0, int limit = 50, String orderField = '\$id', OrderType orderType = OrderType.asc, String orderCast = 'string', String search = '', int first = 0, int last = 0}) {
         final String path = '/database/collections/{collectionId}/documents'.replaceAll(RegExp('{collectionId}'), collectionId);
 
         final Map<String, dynamic> params = {
             'filters': filters,
-            'limit': limit,
             'offset': offset,
+            'limit': limit,
             'orderField': orderField,
             'orderType': orderType.name(),
             'orderCast': orderCast,
             'search': search,
+            'first': first,
+            'last': last,
         };
 
         final Map<String, String> headers = {
@@ -44,13 +46,16 @@ class Database extends Service {
      /// integration](/docs/server/database?sdk=nodejs#createCollection) API or
      /// directly from your database console.
      ///
-    Future<Response> createDocument({@required String collectionId, @required dynamic data, @required List read, @required List write}) {
+    Future<Response> createDocument({@required String collectionId, @required dynamic data, @required List read, @required List write, String parentDocument = '', String parentProperty = '', String parentPropertyType = 'assign'}) {
         final String path = '/database/collections/{collectionId}/documents'.replaceAll(RegExp('{collectionId}'), collectionId);
 
         final Map<String, dynamic> params = {
             'data': data,
             'read': read,
             'write': write,
+            'parentDocument': parentDocument,
+            'parentProperty': parentProperty,
+            'parentPropertyType': parentPropertyType,
         };
 
         final Map<String, String> headers = {
