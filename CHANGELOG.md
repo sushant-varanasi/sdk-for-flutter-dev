@@ -1,3 +1,7 @@
+## 0.3.2
+
+- Fixed package namespaces
+
 ## 0.3.1
 
 - Downgraded meta package version to 1.1.8
