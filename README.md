@@ -2,7 +2,7 @@
 
 [![pub package](https://img.shields.io/pub/v/appwrite.svg)](https://pub.dartlang.org/packages/appwrite)
 ![License](https://img.shields.io/github/license/appwrite/sdk-for-flutter-dev.svg?v=1)
-![Version](https://img.shields.io/badge/api%20version-0.6.2-blue.svg?v=1)
+![Version](https://img.shields.io/badge/api%20version-0.7.0-blue.svg?v=1)
 
 **This SDK is compatible with Appwrite server version 0.6.2. For older versions, please check previous releases.**
 
@@ -20,7 +20,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yml
 dependencies:
-  appwrite: ^0.2.3
+  appwrite: ^0.3.0
 ```
 
 You can install packages from the command line:

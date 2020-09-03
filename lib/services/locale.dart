@@ -122,4 +122,18 @@ class Locale extends Service {
 
         return client.call(HttpMethod.get, path: path, params: params, headers: headers);
     }
+
+     /// List Languages
+    Future<Response> getLanguages() {
+        final String path = '/locale/languages';
+
+        final Map<String, dynamic> params = {
+        };
+
+        final Map<String, String> headers = {
+            'content-type': 'application/json',
+        };
+
+        return client.call(HttpMethod.get, path: path, params: params, headers: headers);
+    }
 }
