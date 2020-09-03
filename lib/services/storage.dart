@@ -125,8 +125,9 @@ class Storage extends Service {
         };
 
         params.keys.forEach((key) {if (params[key] is int || params[key] is double) {
-              params[key] = params[key].toString();
-            }});
+          params[key] = params[key].toString();
+        }});
+        
         Uri endpoint = Uri.parse(client.endPoint);
         Uri location = new Uri(scheme: endpoint.scheme,
           host: endpoint.host,
@@ -158,8 +159,9 @@ class Storage extends Service {
         };
 
         params.keys.forEach((key) {if (params[key] is int || params[key] is double) {
-              params[key] = params[key].toString();
-            }});
+          params[key] = params[key].toString();
+        }});
+        
         Uri endpoint = Uri.parse(client.endPoint);
         Uri location = new Uri(scheme: endpoint.scheme,
           host: endpoint.host,
@@ -185,8 +187,9 @@ class Storage extends Service {
         };
 
         params.keys.forEach((key) {if (params[key] is int || params[key] is double) {
-              params[key] = params[key].toString();
-            }});
+          params[key] = params[key].toString();
+        }});
+        
         Uri endpoint = Uri.parse(client.endPoint);
         Uri location = new Uri(scheme: endpoint.scheme,
           host: endpoint.host,
